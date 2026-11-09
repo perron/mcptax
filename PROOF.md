@@ -1,6 +1,10 @@
 # mcptax proof
 
-Captured 2026-11-09 12:13 PST on the box.
+Captured 2026-11-09 13:26 PST.
+
+Fresh-venv install: `pip install .` succeeded and `mcptax --version` printed `mcptax 0.1.1`.
+
+Tests: 13 passed in 0.02s
 
 ```
 estimator: ceil(utf8_bytes / 4)

@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 DEFAULT_WINDOW = 200_000
 
@@ -132,7 +132,7 @@ def main(argv: list[str] | None = None) -> int:
         if not path.is_file():
             print(f"error: file not found: {path}", file=sys.stderr)
             return 1
-        raw = path.read_text(encoding="utf-8")
+        raw = path.read_text(encoding="utf-8", errors="replace")
     try:
         data = json.loads(raw)
         servers = normalize_servers(data)

@@ -4,13 +4,28 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mcptax"
-version = "0.1.0"
+version = "0.1.1"
 description = "Measure the hidden token tax of MCP tool schemas before you connect them."
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [{name = "Karl Perron"}]
+keywords = ["ai", "mcp", "cli", "tokens"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Environment :: Console",
+]
 dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/perron/mcptax"
+Repository = "https://github.com/perron/mcptax"
+Issues = "https://github.com/perron/mcptax/issues"
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]

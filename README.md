@@ -10,8 +10,13 @@ API key is required, and the number is deterministic.
 
 ## Install
 
+Python 3.10 or later.
+
+From a checkout:
+
 ```bash
-python3 -m pip install -e .
+python3 -m pip install .
+python3 -m pip install -e ".[dev]"  # optional, for tests
 mcptax tools.json
 ```
 
@@ -56,3 +61,21 @@ export a `tools/list` dump.
 Motivated by public reports in late Oct and early Nov 2026 that MCP schemas
 are a per-turn context tax. Original code; no source was copied from any
 MCP host or linter.
+
+## Limits
+
+- Token counts are an approximation: `ceil(utf-8 bytes / 4)`. They are deterministic and require no API key, but they are not a vendor tokenizer.
+- mcptax does not connect to MCP servers. It only reads a JSON dump you already have.
+- A Claude/Cursor-style `mcpServers` config with no tool schemas is listed as "config only" and is not measured.
+
+From GitHub you can also install with:
+
+```bash
+python3 -m pip install git+https://github.com/perron/mcptax.git
+```
+
+This package is not published to PyPI.
+
+## License
+
+MIT. See `LICENSE`. Please read `SECURITY.md` before filing a vulnerability report.
